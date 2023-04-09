@@ -1,0 +1,13 @@
+'''
+Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
+
+'''
+
+class Solution:
+    def addDigits(self, num: int) -> int:
+        while True:
+            if num/10 >= 1:
+                num = sum([int(i) for i in list(str(num))])
+            else:
+                return num
+                break
